@@ -6,8 +6,7 @@
 ;; el-get
 (setq el-get-sources
       '(el-get
-      cc-mode)
-      )
+      cc-mode))
 
 (load-library "getelget.el")
 
@@ -17,3 +16,13 @@
 ;; set M-x mapping C-x C-m or C-c C-m
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\C-c\C-m" 'execute-extended-command)
+
+;; cc-mode
+(setq c-default-style '((java-mode . "java") 
+			(awk-mode . "awk") 
+                        (other . "linux")
+			))
+
+(setq-default indent-tabs-mode  nil)
+(setq tab-width 4
+      c-basic-offset 4)
